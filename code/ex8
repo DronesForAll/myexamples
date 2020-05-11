@@ -1,5 +1,3 @@
-NOTE: If you did not login as the d4asec user use "sudo" before every linux command to avoid the "Permission denied" error. Ex. sudo ls /home/d4asec/
-
 1. Login to the RHDocker or backupl servers as d4asec or d4ab92
 2. Move to my jenkins folder with: cd /home/d4asec/jenkins
 3. Start my Jenkins container (if not already running) with: ./jenkinsd4a_run
@@ -36,6 +34,11 @@ pipeline {
 
 11. Now add your changes to git using the command: git add .
 12. Commit the change with the following command: git commit -m "any message"
-13. Back in the Jenkins web console click on the "test local pipe"
-14. From the left menu click the "Build Now" option and wait for the result.
-15. Most probably the build will fail. I haven't figured out what the problem is... maybe one day I will get it right.
+13. If you receive a message of "Please tell me who you are" then run the follwing commands:
+git config --global user.email d4asec@d4a.com
+git config --global user.name chuy
+git commit -m "yourfilename"
+14. Back in the Jenkins web console click on the "test local pipe"
+15. From the left menu click the "Build Now" option and wait for the result.
+16. Most probably the build will fail. I haven't figured out what the problem is... maybe one day I will get it right.
+
